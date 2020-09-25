@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button onclick="gfg_Run()">Generate Password</button>
+        </div>
+      </div>
+    </div>
+
+    <script> 
+      var el_down = document.getElementById("password"); 
+
+      /* Function to generate combination of password */ 
+      function generateP() { 
+          var pass = ''; 
+          var str = ''
+
+          //////prompts for user
+          var passLength = prompt("Type a password length (8-128 characters): ");
+          var userUpper = confirm("Do you want to use uppercase letters?");
+          var userLower = confirm("Do you want to use lowercase letters?");
+          var userNum = confirm("Do you want to use numbers?");
+          var userChar = confirm("Do you want to use special characters?");
+          ////////
+
+          if (userUpper === true) {
+              str += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            }
+          if (userLower === true) {
+              str += "abcdefghijklmnopqrstuvwxyz'";
+            }
+          if (userNum === true) {
+              str += '1234567890';
+            }
+          if (userChar === true) {
+              str += '!@#$%^&*';
+            }
+          if (userUpper === false && userLower === false && userNum === false && userChar === false) {
+            alert("Error!!! Can not generate password! You need at least one type of character!");
+          }
+
+          /////Randomizer////////
+          for (i = 1; i <= passLength; i++) { 
+            var char = Math.floor(Math.random() 
+                        * str.length + 1); 
+                
+            pass += str.charAt(char) 
+            
+          } 
+            
+          return pass; 
+      } 
+
+      function gfg_Run() { 
+          el_down.innerHTML = generateP(); 
+      } 
+  </script> 
+  </body>
+</html>
