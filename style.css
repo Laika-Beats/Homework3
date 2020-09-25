@@ -73,7 +73,7 @@ header {
 }
 
 .btn {
-  border: 1px solid whitesmoke;
+  border: 1px solid hsl(206, 17%, 28%);
   background-color: #303238;
   border-radius: 25px;
   box-shadow: black;
