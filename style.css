@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #303238;
 }
 
 .wrapper {
@@ -31,11 +31,11 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #1d1e22;
   border-radius: 5px;
   border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  box-shadow: black;
+  color: whitesmoke;
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
@@ -46,7 +46,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: hsl(206, 17%, 28%);
   height: 2px;
 }
 
@@ -62,7 +62,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: hsl(206, 17%, 28%);
   height: 2px;
 }
 
@@ -73,12 +73,11 @@ header {
 }
 
 .btn {
-  border: none;
-  background-color: hsl(360, 91%, 36%);
+  border: 1px solid whitesmoke;
+  background-color: #303238;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
+  box-shadow: black;
+  color: whitesmoke;
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -90,7 +89,7 @@ header {
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background: #1d1e22;
 }
 
 .float-right {
@@ -103,6 +102,7 @@ button[disabled] {
   appearance: none;
   border: none;
   display: block;
+  background: #303238;
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
@@ -112,7 +112,7 @@ button[disabled] {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px dashed #fed96aab ;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
@@ -134,4 +134,16 @@ button[disabled] {
   .btn {
     font-size: 0.8rem;
   }
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+h2 {
+  color: whitesmoke;
+}
+
+textarea {
+  color: whitesmoke;
 }

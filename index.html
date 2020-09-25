@@ -25,58 +25,10 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button onclick="gfg_Run()">Generate Password</button>
+          <button onclick="generatorRun()" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
-
-    <script> 
-      var el_down = document.getElementById("password"); 
-
-      /* Function to generate combination of password */ 
-      function generateP() { 
-          var pass = ''; 
-          var str = ''
-
-          //////prompts for user
-          var passLength = prompt("Type a password length (8-128 characters): ");
-          var userUpper = confirm("Do you want to use uppercase letters?");
-          var userLower = confirm("Do you want to use lowercase letters?");
-          var userNum = confirm("Do you want to use numbers?");
-          var userChar = confirm("Do you want to use special characters?");
-          ////////
-
-          if (userUpper === true) {
-              str += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            }
-          if (userLower === true) {
-              str += "abcdefghijklmnopqrstuvwxyz'";
-            }
-          if (userNum === true) {
-              str += '1234567890';
-            }
-          if (userChar === true) {
-              str += '!@#$%^&*';
-            }
-          if (userUpper === false && userLower === false && userNum === false && userChar === false) {
-            alert("Error!!! Can not generate password! You need at least one type of character!");
-          }
-
-          /////Randomizer////////
-          for (i = 1; i <= passLength; i++) { 
-            var char = Math.floor(Math.random() 
-                        * str.length + 1); 
-                
-            pass += str.charAt(char) 
-            
-          } 
-            
-          return pass; 
-      } 
-
-      function gfg_Run() { 
-          el_down.innerHTML = generateP(); 
-      } 
-  </script> 
+    <script src="script.js"> </script> 
   </body>
 </html>
